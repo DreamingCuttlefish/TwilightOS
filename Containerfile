@@ -49,6 +49,8 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 RUN curl -Lo /etc/yum.repos.d/mullvad.repo https://repository.mullvad.net/rpm/stable/mullvad.repo 
+RUN mkdir /var/lib/opt
+RUN mkdir /opt
 RUN ostree container commit
 
 # Leave Alone:
