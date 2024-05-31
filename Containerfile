@@ -48,8 +48,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
-RUN curl -o /tmp/mullvad-client.rpm https://mullvad.net/en/download/app/rpm/latest
-RUN rpm-ostree install /tmp/mullvad-client.rpm
+RUN /scripts/install_packages.sh 
 
 # Leave Alone:
 
