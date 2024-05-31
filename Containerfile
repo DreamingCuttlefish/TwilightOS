@@ -49,7 +49,9 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY scripts /scripts
-RUN 	/scripts/install_packages.sh && \
+
+RUN chmod +x /scripts/* && \
+ 	/scripts/install_packages.sh && \
 	/scripts/cleanup.sh && \ 
 	ostree container commit
 
