@@ -2,6 +2,7 @@
 
 set -ouex pipefail
 
+mkdir -p "/opt/Mullvad VPN"
 mkdir -p "/opt/Mullvad VPN/resources"
 mkdir -p "/var/log/mullvad-vpn" 
 
