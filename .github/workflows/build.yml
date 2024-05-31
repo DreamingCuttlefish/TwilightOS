@@ -5,7 +5,8 @@ on:
     branches:
       - main
   schedule:
-    - cron: '05 10 * * *'  # 10:05am UTC everyday
+    #    - cron: '05 10 * * *'  # 10:05am UTC everyday
+    - cron: '00 18 * * *'  # 3PM EST every day (after bazzite images finish building)
   push:
     branches:
       - main
