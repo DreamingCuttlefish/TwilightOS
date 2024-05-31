@@ -50,7 +50,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 COPY scripts /scripts
 RUN 	/scripts/install_packages.sh && \
-	/scripts/cleanup.sh
+	/scripts/cleanup.sh && \ 
 	ostree container commit
 
 # Leave Alone:
