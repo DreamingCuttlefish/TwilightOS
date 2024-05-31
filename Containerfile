@@ -50,8 +50,8 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 COPY scripts /scripts
 
-RUN chmod +x /scripts/* && \
- 	/scripts/install_packages.sh && \
+# RUN chmod +x /scripts/* && \
+RUN  	/scripts/install_packages.sh && \
 	/scripts/cleanup.sh && \ 
 	ostree container commit
 
