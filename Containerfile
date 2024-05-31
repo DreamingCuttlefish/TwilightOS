@@ -5,10 +5,10 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 COPY scripts /scripts
 
-RUN chmod +x /scripts/* && \
-  	/scripts/install_packages.sh && \
-	/scripts/cleanup.sh && \ 
-	ostree container commit
+RUN chmod +x /scripts/* # && \
+RUN	/scripts/install_packages.sh # && \
+RUN	/scripts/cleanup.sh #  && \ 
+RUN	ostree container commit
 
 # Leave Alone:
 
