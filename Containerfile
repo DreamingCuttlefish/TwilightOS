@@ -1,7 +1,7 @@
 ARG SOURCE_IMAGE="bazzite-gnome"
 ARG SOURCE_SUFFIX=""
 ARG SOURCE_TAG="latest"
-FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
+FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG} as twilightos-gnome
 
 COPY scripts /scripts
 
