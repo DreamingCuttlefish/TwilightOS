@@ -3,7 +3,7 @@
 set -ouex pipefail
 
 echo "Creating directories..."
-mkdir -p "/opt/Mullvad VPN/resources"
+#mkdir -p "/opt/Mullvad VPN/resources"
 mkdir -p "/var/log/mullvad-vpn"
 
 echo "Downloading repository files..."
